@@ -1,9 +1,5 @@
 package exercicios;
 
-import org.w3c.dom.ls.LSOutput;
-
-import javax.crypto.spec.PSource;
-
 public class Pessoa {
     // atributos = características
     private String id;
@@ -13,13 +9,9 @@ public class Pessoa {
     private int height; // metros
 
     // CONSTRUTORES
-    Pessoa() {
+    Pessoa() {}
 
-    };
-
-    Pessoa(String id, String name, int age) {
-
-    };
+    Pessoa(String id, String name, int age) {}
 
     Pessoa(String id, String name, int age, int weight, int height) {
         this.id = id;
@@ -27,7 +19,7 @@ public class Pessoa {
         this.age = age;
         this.weight = weight;
         this.height = height;
-    };
+    }
 
     // MÉTODOS
     int calcularIMC(int weight, int height) {
@@ -36,21 +28,21 @@ public class Pessoa {
         if (imc < 20) {
             return -1;
         } else {
-            if (imc >= 20 && imc <= 25) {
+            if (imc <= 25) {
                 return 0;
             } else {
                 return -1;
             }
         }
-    };
+    }
 
-    boolean ehMaioIdade(int age) {
+    boolean ehMaiorIdade(int age) {
         return age >= 18;
-    };
+    }
 
     public String getName() {
         return name;
-    };
+    }
 
     @Override
     public String toString() {
@@ -59,5 +51,5 @@ public class Pessoa {
             + ", Peso: " + weight + "kg"
             + ", Altura: " + height + "m"
             + ", Idade: " + age + " anos";
-    };
+    }
 }

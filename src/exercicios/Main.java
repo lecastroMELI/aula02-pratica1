@@ -10,7 +10,7 @@ public class Main {
         boolean maioridade;
 
         IMC = pessoa3.calcularIMC(65, 175);
-        maioridade = pessoa3.ehMaioIdade(35);
+        maioridade = pessoa3.ehMaiorIdade(35);
 
         switch (IMC){
             case -1:
@@ -22,7 +22,7 @@ public class Main {
             case 1:
                 System.out.println("Sobrepeso");
                 break;
-        };
+        }
 
         System.out.println(pessoa3.getName() + " é maior de idade? " + maioridade);
 
