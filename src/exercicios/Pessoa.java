@@ -5,8 +5,8 @@ public class Pessoa {
     String id;
     String name;
     int age;
-    double weight;
-    double height;
+    int weight; // kg
+    int height; // metros
 
     Pessoa() {
 
@@ -16,7 +16,21 @@ public class Pessoa {
 
     };
 
-    Pessoa(String id, String name, int idade, double weight, double height) {
+    Pessoa(String id, String name, int idade, int weight, int height) {
 
+    };
+
+    int calcularIMC(int weight, int height) {
+        int imc = weight / (height ^ 2);
+
+        if (imc < 20) {
+            return -1;
+        } else {
+            if(imc >= 20 && imc <= 25){
+                return 0;
+            } else {
+                return -1;
+            }
+        }
     };
 }
