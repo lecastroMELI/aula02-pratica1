@@ -1,5 +1,9 @@
 package exercicios;
 
+import org.w3c.dom.ls.LSOutput;
+
+import javax.crypto.spec.PSource;
+
 public class Pessoa {
     // atributos = características
     private String id;
@@ -18,7 +22,11 @@ public class Pessoa {
     };
 
     Pessoa(String id, String name, int age, int weight, int height) {
-
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
     };
 
     // MÉTODOS
@@ -38,5 +46,18 @@ public class Pessoa {
 
     boolean ehMaioIdade(int age) {
         return age >= 18;
+    };
+
+    public String getName() {
+        return name;
+    };
+
+    @Override
+    public String toString() {
+        return "ID: " + id
+            + ", Nome: " + name
+            + ", Peso: " + weight + "kg"
+            + ", Altura: " + height + "m"
+            + ", Idade: " + age + " anos";
     };
 }

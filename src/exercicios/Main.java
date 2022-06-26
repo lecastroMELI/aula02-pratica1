@@ -12,7 +12,20 @@ public class Main {
         IMC = pessoa3.calcularIMC(65, 175);
         maioridade = pessoa3.ehMaioIdade(35);
 
-        System.out.println(IMC);
-        System.out.println(maioridade);
+        switch (IMC){
+            case -1:
+                System.out.println("Abaixo do peso");
+                break;
+            case 0:
+                System.out.println("Peso saudável");
+                break;
+            case 1:
+                System.out.println("Sobrepeso");
+                break;
+        };
+
+        System.out.println(pessoa3.getName() + " é maior de idade? " + maioridade);
+
+        System.out.println(pessoa3);
     }
 }
