@@ -2,12 +2,13 @@ package exercicios;
 
 public class Pessoa {
     // atributos = características
-    String id;
-    String name;
-    int age;
-    int weight; // kg
-    int height; // metros
+    private String id;
+    private String name;
+    private int age;
+    private int weight; // kg
+    private int height; // metros
 
+    // CONSTRUTORES
     Pessoa() {
 
     };
@@ -16,10 +17,11 @@ public class Pessoa {
 
     };
 
-    Pessoa(String id, String name, int idade, int weight, int height) {
+    Pessoa(String id, String name, int age, int weight, int height) {
 
     };
 
+    // MÉTODOS
     int calcularIMC(int weight, int height) {
         int imc = weight / (height ^ 2);
 
